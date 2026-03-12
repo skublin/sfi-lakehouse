@@ -24,7 +24,7 @@ git clone https://github.com/skublin/sfi-lakehouse
 
 cd sfi-lakehouse
 
-python -m venv venv
+python -m venv .venv
 
 source .venv/bin/activate  # na Windows: .venv\Scripts\activate
 
