@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+.env
+
+# Środowiska IDE
+.vscode/
+.idea/
+*.swp
+
+# Dane
+data/
+
+# DuckDB
+*.duckdb
+*.duckdb.wal
+
+# Inne pliki systemowe
+.DS_Store
+Thumbs.db
