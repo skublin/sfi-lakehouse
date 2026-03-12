@@ -1,6 +1,6 @@
 # Lokalny Data Lakehouse (Demo)
 
-Krótki projekt demonstracyjny pokazujący, jak zbudować nowoczesny, w pełni lokalny Data Lakehouse w architekturze **Medallion (Bronze -> Silver -> Gold)**, wykorzystując najszybsze dostępne narzędzia w ekosystemie Pythona.
+Krótki projekt demonstracyjny pokazujący, jak zbudować nowoczesny, w pełni lokalny Data Lakehouse w architekturze **Medallion (Bronze - Silver - Gold)**, wykorzystując najszybsze dostępne narzędzia w ekosystemie Pythona.
 
 Nie potrzebujesz klastra Sparka ani serwera bazy danych, wszystko działa błyskawicznie lokalnie!
 
@@ -12,10 +12,10 @@ Nie potrzebujesz klastra Sparka ani serwera bazy danych, wszystko działa błysk
 
 ## Architektura Projektu
 
-* `01_ingest.py` - **BRONZE:** Pobranie surowych plików Parquet ze strony NYC TLC (Taxi Dataset).
-* `02_silver.py` - **SILVER:** Czyszczenie danych z użyciem `Polars` i zapis jako tabele `Delta`. Odporne na *Schema Drift*.
-* `03_gold.py` - **GOLD:** Biznesowe agregacje (podsumowania miesięczne, top strefy).
-* `04_query.py` - **ANALYTICS:** Błyskawiczne odpytywanie danych z użyciem `DuckDB` (język SQL).
+* `01_ingest.py` - **BRONZE** - Pobranie surowych plików Parquet ze strony NYC TLC (Taxi Dataset).
+* `02_silver.py` - **SILVER** - Czyszczenie danych z użyciem `Polars` i zapis jako tabele `Delta`. Odporne na *Schema Drift*.
+* `03_gold.py` - **GOLD** - Biznesowe agregacje (podsumowania miesięczne, top strefy).
+* `04_query.py` - **ANALYTICS** - Błyskawiczne odpytywanie danych z użyciem `DuckDB` (język SQL).
 
 ## Jak uruchomić projekt?
 
@@ -31,6 +31,8 @@ source .venv/bin/activate  # na Windows: .venv\Scripts\activate
 pip install --upgrade pip
 
 pip install -r requirements.txt
+
+chmod +x run_pipeline.sh
 
 ./run_pipeline.sh      # Linux / macOS, ewentualnie kolejno skrypty z src
 ```
